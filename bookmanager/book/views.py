@@ -15,4 +15,13 @@ from django.http import HttpResponse
 
 
 def index(request):
-    return HttpResponse('ok')
+    # return HttpResponse('ok')
+    # request, 请求
+    # template_name,模板名字
+    # context=None
+    # render:渲染模板
+    context = {
+        'name': '马上有惊喜'
+
+    }
+    return render(request,'book/index.html',context=context)
